@@ -1,0 +1,21 @@
+El objetivo del taller es implementar las funcionalidades de lectura y búsqueda de información de JaveMusic, detalladas
+a continuación.
+• Lectura de información: JaveMusic lee la información sobre las canciones desde un archivo de texto, el cual tiene
+la siguiente estructura:
+– Línea 1: Número (N) de canciones.
+– Líneas 2 a la N+1: Nombre de la canción, autor (sólo el primero), género (sólo un género), nombre del
+álbum, año. Todos estos datos están separados por el caracter pipe ’|’.
+• Búsqueda de información: las siguientes operaciones de búsqueda deben estar disponibles para el usuario:
+– Listar todos los autores presentes, ordenados alfabéticamente.
+– Dado un autor, listar todas sus canciones ordenadas alfabéticamente.
+– Listar todos los álbumes presentes, ordenados cronológicamente.
+– Dado un álbum, listar todas las canciones que componen un álbum, ordenadas alfabéticamente por el nombre
+de la canción.
+– Listar todas las canciones y su álbum, ordenadas alfabéticamente primero por el álbum y después por el
+nombre de la canción.
+El sistema debe permitir al usuario realizar las operaciones de lectura y las diferentes búsquedas a través de un menú
+de opciones. Para ejecutar las búsquedas rápidamente, se sugiere que el programa utilice estructuras lineales ordenadas
+para almacenar los datos al momento de leerlos desde el archivo, de acuerdo a la información requerida por las diferentes
+búsquedas. Por ejemplo, para listar todas las canciones ordenadas por autor, puede crearse una lista de autores, donde
+cada elemento de la lista tenga una referencia a las canciones asociadas a dicho autor. Sin embargo, tampoco se espera
+llegar al extremo de duplicar o triplicar la información para facilitar las búsquedas.
