@@ -1,0 +1,4 @@
+Nombre: Sofia
+Dirección: carrera 30
+Edad: 18
+Teléfono: 324344234
