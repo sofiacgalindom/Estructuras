@@ -5,5 +5,6 @@ Por ejemplo, entre los primeros temas que se vieron se encuentran estructuras li
 
 Posteriormente, subiendo poco a poco de nivel, se requirió de estructuras de caracter no lineal, como los arboles. Para diferenciar entre cada uno de ellos -- ya que puenden implementarse de multiples formas -- me interesó realizar códigos como el de el arbol rojo/negro o red black como el AVL.
 
-Finalmentre, para el tema de grafos, me enfoque en la implementación de códigos de los caminos más baratos o reccoridos más aplicados en la industria. Se verán asi archivos que contienen recorridos Dijkstra y el DFS.
+Finalmentre, para el tema de grafos, me enfoque en la implementación de códigos de los caminos más baratos o reccoridos más aplicados en la industria. Se verán asi archivos que contienen recorridos Dijkstra , el DFS y uno de los mas interesantes de implementar *El problema de las N- reinas*
 
+En este sentido, espero que el siguiente repositorio muestre mi trabajo a lo largo de la clase y el interés que tuve por implementar distintos metodos y librerias para dar distintas soluciones a los problemas propuestos.
