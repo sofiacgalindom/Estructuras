@@ -1,0 +1,42 @@
+// Calcula la efectividad del jugador en relación con otro jugador
+float Jugador::Efectividad(const Jugador& otro) const {
+    float dx = otro.m_PosX - m_PosX;
+    float dy = otro.m_PosY - m_PosY;
+
+    // Se utiliza la fórmula de la distancia Manhattan en lugar de la Euclídea
+    float dist = abs(dx) + abs(dy);
+
+    // La efectividad es inversamente proporcional a la distancia
+    return m_TamanoTerreno / dist;
+}
+
+// Obtiene secuencias de pases óptimas
+SituacionDeJuego::OptSeqs SituacionDeJuego::OptSeqsGet(int num, bool isAttack) const {
+    OptSeqs seqs;
+
+    for (const Jugador& j : m_Jugadores) {
+        float ef = m_Jugadores[num].Efectividad(j);
+        NodoOptSeq nodo;
+        nodo.Desde = num;
+        seqs.push_back(nodo);
+    }
+    return seqs;
+}
+
+// Obtiene la secuencia óptima de pases
+SituacionDeJuego::OptSeq SituacionDeJuego::OptSeqGet(int num, bool isAttack) const {
+    OptSeq optSeq;
+    OptSeqs seqs = OptSeqsGet(num, isAttack);
+
+    float maxEf = -1.0f;
+    for (const NodoOptSeq& nodo : seqs) {
+        float ef = m_Jugadores[num].Efectividad(m_Jugadores[nodo.Desde]);
+        if (ef > maxEf) {
+            maxEf = ef;
+            optSeq.Sec = { num, nodo.Desde };
+            optSeq.FinalProb = ef;
+            optSeq.AllPlayers = false; 
+        }
+    }
+    return optSeq;
+}
